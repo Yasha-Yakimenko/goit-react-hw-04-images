@@ -18,9 +18,10 @@ export const ImageGallery = ({ images, onModalOpen, onImgClick }) => {
 };
 
 ImageGallery.propTypes = {
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+    images: PropTypes.arrayOf(PropTypes.shape({
     onModalOpen: PropTypes.func.isRequired,
     onImgClick: PropTypes.func.isRequired,
-    webformatURL: PropTypes.string.isRequired,
-};
- 
+    id: PropTypes.number.isRequired,
+
+} ) )
+} ;
